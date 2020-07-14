@@ -34,6 +34,20 @@ const add = (date, diff) => {
       date.setDate(date.getDate() + diff);
 
       return date;
+
+    case /[M]/g.test(diff):
+      diff = Number(diff.replace(/[M]/g, ''));
+
+      date.setMonth(date.getMonth() + diff);
+
+      return date;
+
+    case /[s]/g.test(diff):
+      diff = Number(diff.replace(/[s]/g, ''));
+
+      date.setSeconds(date.getSeconds() + diff);
+
+      return date;
   }
 };
 
