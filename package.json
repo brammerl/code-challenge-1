@@ -1,0 +1,25 @@
+{
+  "name": "code-challenge-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose --runInBand --testLocationInResults",
+    "test:watch": "npm run test -- --watch",
+    "start": "node index.js",
+    "start:watch": "nodemon index.js"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^26.0.4",
+    "eslint": "^7.4.0",
+    "jest": "^26.1.0",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {}
+}
