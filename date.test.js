@@ -27,4 +27,16 @@ describe('testing add function', () => {
 
     expect(newDate).toEqual('Tue Aug 19 1975 23:25:30 GMT-0700 (Pacific Daylight Time)');
   });
+
+  it('changes the hours', async() => {
+    const newDate = await add(date, '2h').toString();
+
+    expect(newDate).toEqual('Wed Aug 20 1975 01:15:30 GMT-0700 (Pacific Daylight Time)');
+  });
+
+  it('changes weeks', async() => {
+    const newDate = await add(date, '2w').toString();
+
+    expect(newDate).toEqual('Tue Sep 02 1975 23:15:30 GMT-0700 (Pacific Daylight Time)');
+  });
 });

@@ -19,6 +19,21 @@ const add = (date, diff) => {
       date.setMinutes(date.getMinutes() + diff);
 
       return date;
+
+    case /[h]/g.test(diff):
+      diff = Number(diff.replace(/[h]/g, ''));
+
+      date.setHours(date.getHours() + diff);
+
+      return date;
+
+    case /[w]/g.test(diff):
+      diff = Number(diff.replace(/[w]/g, '')) * 7;
+      
+
+      date.setDate(date.getDate() + diff);
+
+      return date;
   }
 };
 
